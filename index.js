@@ -3,10 +3,11 @@ const app = express();
 const port = 3010;
 const path = require('path');
 
-app.use(express.static('static'));
-
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('pages/index.html'));
+  res.send('Hello World !!');
+});
+app.get('/emp', (req, res) => {
+  res.send('Employee List.');
 });
 
 app.listen(port, () => {
